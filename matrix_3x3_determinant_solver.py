@@ -21,7 +21,7 @@ def matrix_det(matrix):
                 for j in range(len(matrix)):
                     d = (i + j) % len(matrix) 
                     positive_term *= matrix[j, d]
-                    negative_term *= matrix[j, -d]
+                    negative_term *= matrix[j, i-j]
                     
                 plus += positive_term
                 minus += negative_term
